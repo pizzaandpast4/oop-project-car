@@ -1,3 +1,5 @@
 import { Car } from "./js/Car.js";
 
-console.log(Car);
+const bulka = new Car('Audi', '80', 'Black', '70', '8');
+
+console.log(bulka);

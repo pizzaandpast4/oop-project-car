@@ -6,7 +6,7 @@ export class Car {
         this.fuelTank = bakoTalpa;
         this.fuelConsumption = kuroSanaudos;
         this.engineOn = false;
-        this.speed = 0;
+        this.defaultSpeed = 0;
     }
 
 }
