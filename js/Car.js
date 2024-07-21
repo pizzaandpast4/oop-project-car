@@ -6,7 +6,16 @@ export class Car {
         this.fuelTank = bakoTalpa;
         this.fuelConsumption = kuroSanaudos;
         this.engineOn = false;
-        this.defaultSpeed = 0;
+        this.speed = 0;
+    }
+
+    startEngine() {
+        if (this.engineOn === false) {
+            this.engineOn = true;
+            return `Engine is turned on.`;
+        } else {
+            return `Failed to start. Engine is already on.`
+        }
     }
 
 }
