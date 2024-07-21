@@ -35,9 +35,21 @@ export class Car {
     startDriving() {
         if (this.engineOn === false) {
             return `Turn on the engine before driving.`;
+        }
+        if (this.fuelLeft < 2 * this.fuelConsumption) {
+            return `Not enough gasoline to start driving, please fill in the tank.`;
         } else {
             this.speed = 50;
+            this.fuelLeft = this.fuelLeft - 2 * this.fuelConsumption
             return `You are now driving.`;
+        }
+    }
+
+    drivingDriving() {
+        if (this.engineOn === false) {
+            return `Turn on the engine before driving.`;
+        } else {
+            this.speed = 50;
         }
     }
 
@@ -49,7 +61,4 @@ export class Car {
             return `You are not moving.`
         }
     }
-}
-
-
-
+}    
