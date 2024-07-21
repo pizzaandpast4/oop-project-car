@@ -19,11 +19,13 @@ export class Car {
     }
 
     stopEngine() {
+        if (this.speed !== 0) {
+            return `Cannot stop engine, you are driving.`
+        }
         if (this.engineOn === true) {
             this.engineOn = false;
             return `Engine is now off.`
         }
-
         if (this.engineOn === false) {
             return `Engine is already turned off.`;
         }
