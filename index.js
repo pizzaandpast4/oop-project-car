@@ -10,5 +10,11 @@ console.log(bulka);
 console.log(bulka.startEngine());
 console.log(bulka);
 
+console.log(bulka.stopEngine());
+console.log(bulka);
+
+console.log(bulka.stopEngine());
+console.log(bulka);
+
 
 

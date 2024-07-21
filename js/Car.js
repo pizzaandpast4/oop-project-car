@@ -18,4 +18,15 @@ export class Car {
         }
     }
 
+    stopEngine() {
+        if (this.engineOn === true) {
+            this.engineOn = false;
+            return `Engine is now off.`
+        }
+
+        if (this.engineOn === false) {
+            return `Engine is already turned off.`;
+        }
+    }
+
 }
