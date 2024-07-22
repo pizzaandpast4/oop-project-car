@@ -21,8 +21,10 @@ console.log(bulka);
 
 console.log(bulka.startEngine());
 console.log(bulka.startDriving());
+console.log(bulka.drivingDriving());
 console.log(bulka.stopDriving());
 console.log(bulka.fuelLeftInTank());
+
 
 
 

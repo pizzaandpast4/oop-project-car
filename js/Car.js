@@ -50,6 +50,8 @@ export class Car {
             return `Turn on the engine before driving.`;
         } else {
             this.speed = 50;
+            this.fuelLeft = this.fuelLeft - this.fuelConsumption
+            return `You are driving.`;
         }
     }
 
@@ -58,11 +60,26 @@ export class Car {
             this.speed = 0;
             return `You have stopped.`;
         } else {
-            return `You are not moving.`
+            return `You are not moving.`;
         }
     }
 
     fuelLeftInTank() {
-        return `You have ${this.fuelLeft} litres of fuel left.`
+        return `You have ${this.fuelLeft} litres of fuel left.`;
+    }
+
+    fillFuelTank() {
+        if (this.engineOn === true) {
+            return `Engine on, please turn on off the engine first!`;
+        } else {
+            let filledFuel = 0;
+            if (this.fuelLeft === this.fuelTank) {
+                return `Fuel tank full, cannot fill more!`;
+            }
+            if (this.fuelLeft < this.fuelTank) {
+                filledFuel = this.fuelTank - this.fuelLeft;
+            }
+        }
+
     }
 }    
