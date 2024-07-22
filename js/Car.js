@@ -78,6 +78,7 @@ export class Car {
             }
             if (this.fuelLeft < this.fuelTank) {
                 filledFuel = this.fuelTank - this.fuelLeft;
+                return `Filled ${filledFuel} litres of fuel. Fuel tank is full.`
             }
         }
 
