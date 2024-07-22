@@ -37,7 +37,7 @@ export class Car {
             return `Turn on the engine before driving.`;
         }
         if (this.fuelLeft < 2 * this.fuelConsumption) {
-            return `Not enough gasoline to start driving, please fill in the tank.`;
+            return `Not enough fuel to start driving, please fill in the tank.`;
         } else {
             this.speed = 50;
             this.fuelLeft = this.fuelLeft - 2 * this.fuelConsumption
@@ -60,5 +60,9 @@ export class Car {
         } else {
             return `You are not moving.`
         }
+    }
+
+    fuelLeftInTank() {
+        return `You have ${this.fuelLeft} litres of fuel left.`
     }
 }    
